@@ -33,7 +33,14 @@
 
 ## 🎯 核心功能
 
+<img src="C:\Users\wenbo\Desktop\开源\TextGuard\backend\演示图\4.jpg" alt="4" style="zoom: 27%;" /><img src="C:\Users\wenbo\Desktop\开源\TextGuard\backend\演示图\1.jpg" alt="1" style="zoom: 25%;" />
+
+<img src="C:\Users\wenbo\Desktop\开源\TextGuard\backend\演示图\3.jpg" alt="3" style="zoom:25%;" /><img src="C:\Users\wenbo\Desktop\开源\TextGuard\backend\演示图\5.jpg" alt="5" style="zoom:25%;" />
+
+<img src="C:\Users\wenbo\Desktop\开源\TextGuard\backend\演示图\6.jpg" alt="6" style="zoom:25%;" /><img src="C:\Users\wenbo\Desktop\开源\TextGuard\backend\演示图\2.jpg" alt="2" style="zoom:25%;" />
+
 ### 📋 文本校对
+
 > 在线输入文本即可智能校对，支持分片处理超长文本，校对结果高亮展示，逐条修改并导出
 
 ### 📄 文档上传校对
