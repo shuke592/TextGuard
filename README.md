@@ -2,7 +2,7 @@
 
 # 🛡️ TextGuard - 智能文档审校平台
 
-**AI 驱动的新一代文档校对与润色平台，核心能力对标 WPS 黑马校对**
+**AI 驱动的新一代文档校对与润色平台，支持 AI 润色、文本校对、文档上传校对，在线预览、问题高亮、一键/逐条修改，修改后导出。**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10+-3776AB.svg)](https://www.python.org/)
@@ -86,7 +86,7 @@
 
 ```bash
 # 1. 克隆项目
-git clone https://github.com/your-username/TextGuard.git
+git clone https://github.com/shuke592/TextGuard.git
 cd TextGuard
 
 # 2. 配置后端环境
@@ -194,7 +194,6 @@ TextGuard/
 | [功能说明文档](智能文档审校平台功能说明.md) | 产品功能描述、用户端 / 管理后台功能清单 |
 | [部署操作指南](部署操作指南.md) | Docker 部署、日常更新、回滚操作 |
 | [用户使用手册](用户使用手册.md) | 面向终端用户的操作指南 |
-| [开源发布教程](开源发布教程.md) | GitHub/Gitee 发布完整教程 |
 
 ---
 
