@@ -33,11 +33,20 @@
 
 ## 🎯 核心功能
 
-<img src="C:\Users\wenbo\Desktop\开源\TextGuard\backend\演示图\4.jpg" alt="4" style="zoom: 27%;" /><img src="C:\Users\wenbo\Desktop\开源\TextGuard\backend\演示图\1.jpg" alt="1" style="zoom: 25%;" />
+<div align="center">
+  <img src="docs/images/4.jpg" alt="演示图4" width="48%" />
+  <img src="docs/images/1.jpg" alt="演示图1" width="48%" />
+</div>
 
-<img src="C:\Users\wenbo\Desktop\开源\TextGuard\backend\演示图\3.jpg" alt="3" style="zoom:25%;" /><img src="C:\Users\wenbo\Desktop\开源\TextGuard\backend\演示图\5.jpg" alt="5" style="zoom:25%;" />
+<div align="center">
+  <img src="docs/images/3.jpg" alt="演示图3" width="48%" />
+  <img src="docs/images/5.jpg" alt="演示图5" width="48%" />
+</div>
 
-<img src="C:\Users\wenbo\Desktop\开源\TextGuard\backend\演示图\6.jpg" alt="6" style="zoom:25%;" /><img src="C:\Users\wenbo\Desktop\开源\TextGuard\backend\演示图\2.jpg" alt="2" style="zoom:25%;" />
+<div align="center">
+  <img src="docs/images/6.jpg" alt="演示图6" width="48%" />
+  <img src="docs/images/2.jpg" alt="演示图2" width="48%" />
+</div>
 
 ### 📋 文本校对
 
