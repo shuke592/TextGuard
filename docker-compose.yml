@@ -1,0 +1,79 @@
+# TextGuard 智能文档审校平台 Docker Compose（生产环境）
+# ============================================================
+# 部署方式：本地构建镜像 → 导出 → 上传服务器 → docker compose up -d
+# 镜像构建：本地执行 build_images.bat
+# ============================================================
+# 仅 3 个容器：前端(Nginx) / 后端API / Celery Worker
+# 数据库和Redis需自行部署（推荐使用服务器现有服务）
+# 全部使用 host 网络模式
+
+services:
+  # ---- 前端（Nginx + 反向代理后端）----
+  frontend:
+    image: textguard-frontend:latest
+    build: ./frontend
+    container_name: textguard-frontend
+    restart: unless-stopped
+    network_mode: host
+    dns:
+      - 114.114.114.114
+      - 8.8.8.8
+    dns_search: []
+    depends_on:
+      backend:
+        condition: service_healthy
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # ---- 后端 API ----
+  backend:
+    image: textguard-backend:latest
+    build: ./backend
+    container_name: textguard-backend
+    restart: unless-stopped
+    env_file: ./backend/.env.production
+    network_mode: host
+    dns:
+      - 114.114.114.114
+      - 8.8.8.8
+    dns_search: []
+    volumes:
+      - /opt/UploadFile/textGuardUpload:/opt/UploadFile/textGuardUpload
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3020/api/v1/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "20m"
+        max-file: "5"
+
+  # ---- Celery Worker（与后端共用同一镜像）----
+  celery-worker:
+    image: textguard-backend:latest
+    build: ./backend
+    container_name: textguard-celery
+    restart: unless-stopped
+    env_file: ./backend/.env.production
+    network_mode: host
+    command: celery -A app.celery_app:celery_app worker --loglevel=info --pool=solo
+    dns:
+      - 114.114.114.114
+      - 8.8.8.8
+    dns_search: []
+    volumes:
+      - /opt/UploadFile/textGuardUpload:/opt/UploadFile/textGuardUpload
+    depends_on:
+      backend:
+        condition: service_healthy
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"

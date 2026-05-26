@@ -1,0 +1,50 @@
+# Web Framework
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+python-multipart==0.0.18
+
+# Database ORM
+sqlalchemy[asyncio]==2.0.36
+asyncpg==0.30.0
+alembic==1.14.1
+
+# Validation
+pydantic==2.10.4
+pydantic-settings==2.7.1
+
+# Redis
+redis[hiredis]==5.2.1
+
+# Auth & Security
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+bcrypt==4.0.1
+
+# Rate Limiting
+slowapi==0.1.9
+
+# Logging
+loguru==0.7.3
+
+# HTTP Client (LLM calls)
+httpx==0.28.1
+openai==1.58.1
+
+# Document Parsing
+python-docx==1.1.2
+PyMuPDF==1.25.1
+markdown==3.7
+
+# File Export
+reportlab==4.2.5
+openpyxl==3.1.5
+
+# Async Tasks
+celery[redis]==5.4.0
+psycopg2-binary==2.9.12
+
+# CORS
+starlette==0.41.3
+
+# Utils
+python-dotenv==1.0.1

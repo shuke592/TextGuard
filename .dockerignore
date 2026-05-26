@@ -1,0 +1,30 @@
+# Git
+.git
+.gitignore
+
+# 文档
+*.md
+!README.md
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# 环境文件
+.env
+.env.local
+
+# Node
+node_modules
+
+# Python
+__pycache__
+*.pyc
+.venv
+venv
+
+# OS
+.DS_Store
+Thumbs.db

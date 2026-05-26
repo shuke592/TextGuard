@@ -1,0 +1,105 @@
+/* ============================================================
+   TextGuard 全局样式
+   企业级 UI 规范
+   ============================================================ */
+
+:root {
+  /* 颜色规范 */
+  --color-bg: #F5F5F5;
+  --color-border: #CCCCCC;
+  --color-primary: #0056b3;
+  --color-primary-hover: #004494;
+  --color-text: #333333;
+  --color-text-secondary: #666666;
+  --color-disabled: #A9A9A9;
+  --color-accent: #FFA500;
+  --color-white: #FFFFFF;
+  --color-success: #67C23A;
+  --color-warning: #E6A23C;
+  --color-danger: #F56C6C;
+  --color-info: #909399;
+
+  /* 字体规范 */
+  --font-family: "Microsoft YaHei", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+  --font-size-base: 14px;
+  --font-size-small: 12px;
+  --font-size-large: 16px;
+  --font-size-title: 20px;
+  --font-size-heading: 24px;
+
+  /* 间距 */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+
+  /* 圆角 */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+
+  /* 阴影 */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.16);
+}
+
+/* 全局重置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+}
+
+/* 滚动条美化 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #c0c4cc;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* Element Plus 主题覆盖 */
+:root {
+  --el-color-primary: #0056b3;
+  --el-color-primary-light-3: #3378c5;
+  --el-color-primary-light-5: #6699d1;
+  --el-color-primary-light-7: #99bbde;
+  --el-color-primary-light-8: #b3cce6;
+  --el-color-primary-light-9: #ccddef;
+  --el-color-primary-dark-2: #004494;
+}
+
+/* 通用链接样式 */
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--color-primary-hover);
+  }
+}

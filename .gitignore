@@ -1,0 +1,54 @@
+# ============================================================
+# TextGuard .gitignore
+# ============================================================
+
+# ---- 环境配置（含敏感信息，勿提交） ----
+backend/.env
+backend/.env.production
+backend/.env.docker
+
+# ---- SSL 证书 ----
+frontend/ssl/
+nginx/
+
+# ---- Python ----
+backend/venv/
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+*.egg
+
+# ---- Node.js ----
+frontend/node_modules/
+frontend/dist/
+
+# ---- Docker 构建产物 ----
+docker-images/*.tar
+
+# ---- 上传文件 ----
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# ---- IDE ----
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ---- OS ----
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ---- 日志 ----
+*.log
+logs/
+
+# ---- 内部开发文档（不随开源发布） ----
+修改问题反馈记录.md
+待修复问题汇总.md
+服务器IP封禁问题备忘.md
+飞书对接流程及配置及开发文档.md
